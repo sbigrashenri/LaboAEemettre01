@@ -1,42 +1,43 @@
 /*  
-	But : Écrire un programme qui lit un entier et qui détermine et affiche s'il sagit d'un entier
+	But : Ã‰crire un programme qui lit un entier et qui dÃ©termine et affiche s'il sagit d'un entier
 	ou d'un entier impair
-	Auteur : Sébatien Bigras-Henri
+	Auteur : SÃ©batien Bigras-Henri
 	Date :2020-10-08
 */
 #include <iostream>
 
 int main()
 {
-	setlocale(LC_ALL, ""); // Va servir à convertir les accents de Windows à la console de la bonne façon
+	setlocale(LC_ALL, ""); // Va servir Ã  convertir les accents de Windows Ã  la console de la bonne faÃ§on
 
-	int nombre1; // la variable est déclaré ici, au début si programme. 
+	int nombre1; // FR : la variable est dÃ©clarÃ© ici, au dÃ©but si programme. 
 
 
-	// Le programme invite l'utilisateur à taper un nombre entier, par la suite le programme l'affiche
+	// Le programme invite l'utilisateur Ã  taper un nombre entier, par la suite le programme l'affiche
 	std::cout << "veuillez entrer un nombre entier : ";
 	// Le programme 
 	std::cin >> nombre1;
 
-	if (nombre1 % 2 == 0 ) // Le programme regarde les nombres entrés par l'utilisateur et lui dit s'il est pair ou impair.
-		// création d'un autre block d'instruction qui sera activé seulement si la condition est vraie
+	if (nombre1 % 2 == 0 ) // Le programme regarde les nombres entrÃ©s par l'utilisateur et lui dit s'il est pair ou impair.
+		// crÃ©ation d'un autre block d'instruction qui sera activÃ© seulement si la condition est vraie
 	{
-		std::cout << nombre1 << " est un nombre pair"; // Si le programme détecte que le nombre se termine par 2, 4, 6, 8 ou 0
-		                                               // il doit écrire cette la phrase nombre1 "est un nombre pair"
+		std::cout << nombre1 << " est un nombre pair"; // Si le programme dÃ©tecte que le nombre se termine par 2, 4, 6, 8 ou 0
+		                                               // il doit Ã©crire cette la phrase nombre1 "est un nombre pair"
 	}
 	else
 	{
-		std::cout << nombre1 << " est un nombre impair";  // À l'inverse s'il ne détecte pas que le nombre est divisible par un de ces nombre, 
+		std::cout << nombre1 << " est un nombre impair";  // Ã€ l'inverse s'il ne dÃ©tecte pas que le nombre est divisible par un de ces nombre, 
 		                                                   // il marquera que le nombre1 "est un nombre impair" 
 	}
 
-	return 0; // Fermeture du programme avec succès.
+	return 0; // Fermeture du programme avec succÃ¨s.
 
 }
 
 // Plan de tests
+// KM : Teste aussi la valeur 0
 /*
-nombre1              résultat attendu
+nombre1              rÃ©sultat attendu
 12                   12 est un nombre pair
 -7                   -7 est un nombre impair
 45                   45 est un nombre impair
