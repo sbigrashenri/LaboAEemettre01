@@ -1,6 +1,6 @@
 /*
-But : …crire un programme qui prend comme entrÈe un nombre de cinq chiffres et qui vÈrifi bien qu'il y a 5 chiffre dans le nombre et enfin, il affiche le nombre verticalement.
-Auteur : SÈbastien Bigras-Henri
+// FR : But : √âcrire un programme qui prend comme entr√©e un nombre de cinq chiffres et qui v√©rifi bien qu'il y a 5 chiffre dans le nombre et enfin, il affiche le nombre verticalement.
+Auteur : S√©bastien Bigras-Henri
 Date : 2020-10-09
 */
 
@@ -14,25 +14,29 @@ int main()
 
 	int nombre1;
 
-	std::cout << "veuillez entrer un nombre entier ‡ cinq chiffres :";
-	std::cin >> nombre1; // Saisir l'entrÈ des donnÈes. 
-	// VÈrifier le nombre entrÈ : il faut que le nombre1 soit de cinq chiffres.
+	std::cout << "veuillez entrer un nombre entier √† cinq chiffres :";
+	std::cin >> nombre1; // Saisir l'entr√© des donn√©es. 
+	// V√©rifier le nombre entr√© : il faut que le nombre1 soit de cinq chiffres.
+	// KM : Attention d'utiliser juste les notions vues en classe jusqu'√† pr√©sent
 	if (nombre1 < 10000 || nombre1 > 99999)
 	{
 		std::cout << " Ce nombre ne contient pas 5 chiffres. ";
 		return -1; // Fermeture du programme avec code d'erreur. 
+		// KM : Oui excellente id√©e !
 	}
-	std::string charactËres = std::to_string(nombre1); // Convertir le nombre en string.
-	for (char const& c : charactËres)// Parcourir la liste des charactËres et imprimer un charactËres ‡ la fois.
+	// KM : M√™me chose ici, n'utilise que ce qu'on a vu en classe, car ici je veux valider la comp√©tence √† utiliser des op√©rateurs arithm√©tiques
+	// et il y en a aucun dans le code
+	std::string charact√®res = std::to_string(nombre1); // Convertir le nombre en string.
+	for (char const& c : charact√®res)// FR : Parcourir la liste des charact√®res et imprimer un charact√®res √† la fois.
 	{
-		std::cout << c << std::endl; // Imprimer un charactËre avec un retour de ligne.
+		std::cout << c << std::endl; // FR : Imprimer un charact√®re avec un retour de ligne.
 	}
 
-	return 0; // Fermeture du programme avec succËs.
+	return 0; // Fermeture du programme avec succ√®s.
 }
 // Plan de tests.
 /*
-Nombre1           RÈsultat attendu
+Nombre1           R√©sultat attendu
 12345             Imprimer 12345 en vertical
 23475             Imprimer 23475 en vertical
 0                 Ce nombre ne contient pas 5 chiffres
